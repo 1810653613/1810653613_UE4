@@ -1,3 +1,4 @@
+import java.awt.print.Paper;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,7 +24,17 @@ public class Aufruf
             System.out.println(a.getTitle() + " hat " + a.getPages() + " Seiten und folgende ISBN: " + a.getIsbn());
         }
 
+        List<Paperbook> Liste2=new ArrayList<>();
+        Liste2.add(new Paperbook("Series 1","Januar", 200, new Date(), "My Paperbook 1", "00000-000000-0000"));
+        Liste2.add(new Paperbook("Series 2","Februar", 210, new Date(), "My Paperbook 2", "00000-000000-0000"));
+        Liste2.add(new Paperbook("Series 3","März", 240, new Date(), "My Paperbook 3", "00000-000000-0000"));
+        Liste2.add(new Paperbook("Series 4","April", 100, new Date(), "My Paperbook 4", "00000-000000-0000"));
+        Liste2.add(new Paperbook("Series 5","Mai", 140, new Date(), "My Paperbook 5", "00000-000000-0000"));
 
+        for(Paperbook a:Liste2)
+        {
+            System.out.println(a.getTitle() + " hat " + a.getPages() + " Seiten und folgende ISBN: " + a.getIsbn() + " zusätzlich ist es im Monat " + a.getMonth() + " erschienen.");
+        }
 
     }
 
